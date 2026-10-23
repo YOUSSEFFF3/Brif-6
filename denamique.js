@@ -173,9 +173,12 @@ function totale() {
             // console.log(total);
         } else continue;
     }
+    let tikket = document.getElementById("tiket-price")
     let totale_price = document.getElementById("total-calcule")
+    console.log(tikket);
     console.log(totale_price);
-    totale_price.innerHTML = total;
+    totale_price.innerHTML = total + ",00DH";
+    tikket.innerHTML = total + ",00DH";
     console.log(totale_price);
 }
 
@@ -187,7 +190,7 @@ function loadPage2() {
 
         naame.innerHTML = the_order[order_key].name
 
-        let pricce = document.getElementById(`${order_key}-price`)
+        let pricce = document.getElementById(`${order_key}-price`) 
 
         pricce.innerHTML = the_order[order_key].price
         console.log(naame.innerHTML);
@@ -200,8 +203,25 @@ let hero = document.getElementById("hero")
 let bill = document.getElementById("ticket-id")
 const link = document.querySelectorAll(".a > a")
 let total = document.getElementById("barr")
-
+const button = document.getElementById("ajouter au panier")
+let modification=document.querySelector(".modification>a")
 console.log(link);
+console.log(button);
+
+button.addEventListener("click", () => {
+    hero.classList.add("hidden")
+    total.classList.add("hidden")
+    bill.classList.remove("hidden")
+    loadPage2()
+    contenu()
+}
+)
+modification.addEventListener("click", () => {
+    bill.classList.add("hidden")
+    total.classList.remove("hidden")
+    hero.classList.remove("hidden")
+}
+)
 
 link[0].addEventListener("click", () => {
     bill.classList.add("hidden")
@@ -214,6 +234,21 @@ link[1].addEventListener("click", () => {
     total.classList.add("hidden")
     bill.classList.remove("hidden")
     loadPage2()
+    contenu()
+
 }
 )
+function contenu() {
+    let comand="";
+    for (const order_keyy in the_order) {
+        if (the_order[order_keyy].price != null) {
+            comand += the_order[order_keyy].name+" . "
+        } else continue
 
+    }
+    let commend=document.getElementById("commend")
+    console.log(commend);
+    
+    commend.innerHTML= comand
+}
+// Espresso · M · Avoine · Caramel

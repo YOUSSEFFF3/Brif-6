@@ -43,7 +43,7 @@
         <section class="links">
             <div class="link">
                 <div class="a">
-                    <a href="#" >01 Personnaliser</a>
+                    <a href="#">01 Personnaliser</a>
                 </div>
                 <div class="a">
                     -
@@ -92,8 +92,8 @@
                             <label>
                                 <div class="choises" id="premier-chois">
                                     <input type="radio" name="base" value="expresso" checked>
-                                   <span id="base-espresso-name">Espresso</span>
-                                   <span class="small" id="base-espresso-price"> 18 dh</span>
+                                    <span id="base-espresso-name">Espresso</span>
+                                    <span class="small" id="base-espresso-price"> 18 dh</span>
                                 </div>
                             </label>
                         </div>
@@ -197,16 +197,16 @@
                     </div>
                     <div class="les-choix">
                         <div class="choises-typ">
-                            <label >
+                            <label>
                                 <div class="choises" id="deux-chois">
                                     <input type="radio" name="plus" value="Caramel">
-                                   <span id="supplements-caramel-name"> Caramel</span>
+                                    <span id="supplements-caramel-name"> Caramel</span>
                                     <span class="small" id="supplements-caramel-price">+ 3,00 DH</span>
                                 </div>
                             </label>
                         </div>
                         <div class="choises-typ">
-                            <label >
+                            <label>
                                 <div class="choises" id="deux-chois">
                                     <input type="radio" name="plus" value="Vanille">
                                     <span id="supplements-vanille-name">Vanille</span>
@@ -231,7 +231,7 @@
                 </div>
             </div>
             <div class="button">
-                <button>ajouter au panier -> </button>
+                <button id="ajouter au panier">ajouter au panier -> </button>
             </div>
         </section>
         <section class="Bill-section hidden" id="ticket-id">
@@ -244,68 +244,76 @@
                         exactement comme vous l’aimez.</h2>
                 </div>
             </div>
-            <article class="image">
-                <img src="./assets/image.png" alt="coffee-image">
-                <div class="nome-et-modification">
-                    <div class="selection">
-                        <div>
-                            <h3 class="h3">Votre café signature</h3>
+            <div class="the-bille">
+                <article class="image">
+                    <img src="./assets/image.png" alt="coffee-image">
+                    <div class="nome-et-modification">
+                        <div class="selection">
+                            <div>
+                                <h3 class="h3">Votre café signature</h3>
+                            </div>
+                            <div>
+                                <span class="small" id="commend">Espresso · M · Avoine · Caramel</span>
+                            </div>
                         </div>
-                        <div>
-                            <span class="small">Espresso · M · Avoine · Caramel</span>
+                        <div class="modification">
+                            <a href="#">modifier</a>
                         </div>
                     </div>
-                    <div class="modification">
-                        <a href="#">modifier</a>
+                </article>
+                <div class="tout-la-ticket">
+                    <div>
+                        <div class="boutton">
+                            <button>✓ Sélection ajoutée</button>
+                        </div>
+                        <div class="bille-title">
+                            <h3 class="h3">Votre récapitulatif</h3>
+                        </div>
                     </div>
-                </div>
-            </article>
-            <div class="tout-la-ticket">
-                <div>
-                    <div class="boutton">
-                        <button>✓ Sélection ajoutée</button>
-                    </div>
-                    <div class="bille-title">
-                        <h3 class="h3">Votre récapitulatif</h3>
-                    </div>
-                </div>
-                <div class="table">
-                    <small class="small">
-                        Une création personnalisée · Quantité : 1
-                    </small>
-                    <table>
-                        <tbody>
-                            <tr >
-                                <td class="small1" id="basse-name">Base · Espresso</td>
-                                <td class="small2" id="basse-price">18,00 DH</td>
-                            </tr>
-                            <tr>
-                                <td class="small1" id="taiille-name">Taille · M / 250 ml</td>
-                                <td class="small2" id="taiille-price">4,00 DH</td>
-                            </tr>
-                            <tr>
-                                <td class="small1" id="laiit-name">Lait · Avoine</td>
-                                <td class="small2" id="laiit-price">4,00 DH</td>
-                            </tr>
-                            <tr>
-                                <td class="small1" id="suppplements-name">Supplément · Caramel</td>
-                                <td class="small2" id="suppplements-price">3,00 DH</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <div class="total">
-                        <span>total</span>
-                        <span>29,00 DH</span>
-                        <small>Prix de cette sélection · aucun paiement effectué.</small>
-                        <button>Créer un autre café   →</button>
-                        <div class="text-selectionement">
-                            <small>✓ Votre sélection reste modifiable à tout moment.</small>
+                    <div class="table">
+                        <small class="small">
+                            Une création personnalisée · Quantité : 1
+                        </small>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td class="small1" id="basse-name">Base · Espresso</td>
+                                    <td class="small2" id="basse-price">18,00 DH</td>
+                                </tr>
+                                <tr>
+                                    <td class="small1" id="taiille-name">Taille · M / 250 ml</td>
+                                    <td class="small2" id="taiille-price">4,00 DH</td>
+                                </tr>
+                                <tr>
+                                    <td class="small1" id="laiit-name">Lait · Avoine</td>
+                                    <td class="small2" id="laiit-price">4,00 DH</td>
+                                </tr>
+                                <tr>
+                                    <td class="small1" id="suppplements-name">Supplément · Caramel</td>
+                                    <td class="small2" id="suppplements-price">3,00 DH</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="total">
+                            <div class="price-box">
+                            <span class="price" >total</span>
+                            <span class="price" id="tiket-price">29,00 DH</span>
+                            </div>
+                            <div>
+                            <small>Prix de cette sélection · aucun paiement effectué.</small>
+                            </div>
+                            <div>
+                            <button>Créer un autre café →</button>
+                            </div>
+                            <div class="text-selectionement">
+                                <small>✓ Votre sélection reste modifiable à tout moment.</small>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-         <footer class="footer">
+        <footer class="footer">
             <div>
                 <small class="small">
                     BRUME — Le goût de votre rythme
@@ -320,4 +328,5 @@
     </main>
 </body>
 <script src="./denamique.js"></script>
+
 </html>
