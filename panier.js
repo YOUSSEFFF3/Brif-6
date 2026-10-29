@@ -36,56 +36,62 @@ let ajouter = document.querySelector(".panie-button")
 
 let product = []
 console.log(product);
-
-
+let bouttonPlus = document.querySelectorAll(".button-plus")
+let bouttonMoin = document.querySelectorAll(".button-moin")
+console.log(bouttonMoin);
 data()
-
 const box = document.querySelector(".panie-box")
-
 const panieContainer = document.querySelector(".panier")
-
 const boutton = document.querySelectorAll(".button")
-const bouttonPlus = document.querySelectorAll(".button-plus")
-const bouttonMoin=document.querySelectorAll(".button-moin")
-bouttonPlus.forEach(plus =>{
-    plus.addEventListener("click",(Z)=>{
-        const target=Z.target.closest(".panie-box")
-        console.log(target);
-        let quantity =target.querySelector(".conter>span")
-        console.log(target.querySelector(".conter>span"));
-        quantity.innerHTML= +quantity.innerHTML + 1
-        
-    })
-})
-bouttonMoin.forEach(plus =>{
-    plus.addEventListener("click",(Z)=>{
-        const target=Z.target.closest(".panie-box")
-        console.log(target);
-        let quantity =target.querySelector(".conter>span")
-        console.log(target.querySelector(".conter>span"));
-       
-        quantity.innerHTML= +quantity.innerHTML - 1
-         let
-    })
-})
-
 // console.log(boutton);
 boutton.forEach(pic => {
     pic.addEventListener("click", (e) => {
         const varialble = e.target.closest(".cart")
         console.log(varialble);
         let price = varialble.querySelector(".price-product").innerHTML
-        let name = varialble.querySelector(".name-product").innerHTML   
-        // console.log(a);
-        productPanie(name,price)
-        
+        let name = varialble.querySelector(".name-product").innerHTML
+
+        productPanie(name, price)
+        bouttonPlus = document.querySelectorAll(".button-plus")
+        bouttonMoin = document.querySelectorAll(".button-moin")
+        console.log(bouttonMoin);
         panie_section.classList.remove("hide")
         card_section.classList.add("hide")
+        Plus()
+        Moin()
         cherchSection.classList.add("hide")
-
     })
-
 });
+
+function Plus() {
+
+
+    bouttonPlus.forEach(plus => {
+        plus.addEventListener("click", (Z) => {
+            const target = Z.target.closest(".panie-box")
+            console.log(target);
+            let quantity = target.querySelector(".conter>span")
+            console.log(target.querySelector(".conter>span"));
+            quantity.innerHTML = +quantity.innerHTML + 1
+
+        })
+    })
+}
+Plus()
+function Moin() {
+    bouttonMoin.forEach(plus => {
+        plus.addEventListener("click", (Z) => {
+            const target = Z.target.closest(".panie-box")
+            console.log(target);
+            let quantity = target.querySelector(".conter>span")
+            console.log(target.querySelector(".conter>span"));
+            if (quantity.innerHTML > 0) {
+                quantity.innerHTML = +quantity.innerHTML - 1
+            }
+        })
+    })
+}
+Moin()
 //*********************input search donne le contenue de l'object********** */
 searchInput.addEventListener("input", (e) => {
     const valuee = e.target.value.toLowerCase()
@@ -99,41 +105,36 @@ searchInput.addEventListener("input", (e) => {
     });
 })
 //***************clone de l HTML box panie**************** */
-function productPanie(text,number) {
+function productPanie(text, number) {
     const panie = box.cloneNode(true)
     console.log(panie);
     const paniePrice = panie.querySelector(".product-price")
     const panieName = panie.querySelector(".c2-Cappuccino-Mousseux")
     const defaultt = panie.querySelector(".c2-quantity")
     console.log(defaultt);
-    
+
     defaultt.innerHTML = 1
     // console.log(panieName.innerHTML); 
     panieName.innerHTML = text
-    paniePrice.innerHTML=number+".00 DH"
+    paniePrice.innerHTML = number + " DH"
     panieContainer.append(panie)
     console.log(panieContainer);
-    
+
 }
-
-
-
 //******************* */ donnais de le grand object**********************$ 
 function data() {
     product = coffeeProducts.map(key => {
         const card = productData.cloneNode(true).children[0]
         const productName = card.querySelector(".name-product")
-         const priceSearch = card.querySelector(".price-product")
+        const priceSearch = card.querySelector(".price-product")
         const categoryProduct = card.querySelector(".category-product")
         productName.innerHTML = key.name
         priceSearch.innerHTML = key.price
         // categoryProduct.textContent= key.category
         productContainer.append(card)
-        return { name: key.name, element: card ,price:key.price}
+        return { name: key.name, element: card, price: key.price }
     });
 }
-
-
 // 2. Le tableau des produits dans le panier par défaut (avec un accessoire)
 let coffeeCart = [
     {
@@ -168,9 +169,9 @@ for (const key in coffeeCart) {
     let contiti = document.querySelector(`.${coffeeCart[key].id}-quantity`)
     contiti.innerHTML = `${coffeeCart[key].quantity} `
     console.log(`${coffeeCart[key].quantity} `);
-    let price= document.querySelector(`#${coffeeCart[key].id}-price`)
+    let price = document.querySelector(`#${coffeeCart[key].id}-price`)
     console.log(price);
-price.innerHTML = `${coffeeCart[key].price}.00 DH `
+    price.innerHTML = `${coffeeCart[key].price} DH `
 }
 commend_button.addEventListener("click", () => {
     panie_section.classList.add("hide")
@@ -193,3 +194,7 @@ returne.addEventListener("click", () => {
     panie_section.classList.remove("hide")
     // console.log("a");
 })
+function total() {
+}
+function name(params) { 
+}
