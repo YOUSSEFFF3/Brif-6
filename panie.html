@@ -40,14 +40,21 @@
                 </div>
             </div>
         </div>
-        <section class="panie-section hide">
+        <section class="panie-section ">
             <div class="panier">
                 <div class="panie-box">
                     <div class="text">
                         <div class="produit-image">
-                            <!-- <img src="cappuccino.jpg" alt=""> -->
+                            <img src="cappuccino.jpg" alt="">
                         </div>
-                        <span class="c2-Cappuccino-Mousseux cafe">jskvkvjbav</span>
+                         <div>
+                            <span class="c2-Cappuccino-Mousseux cafe">hjhkhihkh</span>
+                        </div>
+                        <div class="product-price" id="c2-price">
+                            <span>total</span>
+                        </div>
+                        <!-- <div class="c2-Cappuccino-Mousseux cafe">
+                        </div> -->
                     </div>
                     <div>
                         <button class="button-plus"> + </button>
@@ -65,7 +72,12 @@
                             <img src="https://www.thedailymeal.com/img/gallery/the-one-ingredient-that-will-make-or-break-your-at-home-cappuccino/intro-1670419517.jpg"
                                 alt="">
                         </div>
-                        <span class="c3-Latte-Caramel cafe">hjhkhihkh</span>
+                        <div>
+                            <span class="c3-Latte-Caramel cafe">hjhkhihkh</span>
+                        </div>
+                        <div class="product-price" id="c3-price">
+                            <span>total</span>
+                        </div>
                     </div>
                     <div>
                         <button class="button-plus"> + </button>
@@ -83,7 +95,12 @@
                             <img src="https://static.vecteezy.com/system/resources/previews/025/282/026/large_2x/stock-of-mix-a-cup-coffee-latte-more-motive-top-view-foodgraphy-generative-ai-photo.jpg"
                                 alt="">
                         </div>
-                        <span class="c8-Mug-Isotherme-Noir cafe">jvhaieuvqiu</span>
+                        <div>
+                            <span class="c8-Mug-Isotherme-Noir cafe">jvhaieuvqiu</span>
+                        </div>
+                        <div class="product-price" id="c8-price">
+                            <span>total</span>
+                        </div>
                     </div>
                     <div>
                         <button class="button-plus"> + </button>
@@ -95,47 +112,33 @@
                         <button class="button-moin"> - </button>
                     </div>
                 </div>
-                <div class="panie-box">
-                    <div class="text">
-                        <div class="produit-image">
-                            <!-- <img src="cappuccino.jpg" alt=""> -->
-                        </div>
-                        <span>kqhv</span>
-                    </div>
-                    <div>
-                        <button class="button-plus"> + </button>
-                    </div>
-                    <div class="conter">
-                        <span>3</span>
-                    </div>
-                    <div>
-                        <button class="button-moin"> - </button>
-                    </div>
-                </div>
-                <div class="panie-button">
-                    <button> Ajouter un autre produit →</button>
-                </div>
-                <div class="panie-button" id="commend-button">
-                    <button> commander maintenant </button>
-                </div>
+            </div>
+            <div class="total-box">
+                <span class="total">total</span>
+                <span class="total" id="price">price</span>
+            </div>
+            <div class="panie-button">
+                <button> Ajouter un autre produit →</button>
+            </div>
+            <div class="panie-button" id="commend-button">
+                <button> commander maintenant </button>
             </div>
         </section>
-        <section class="recherche-section">
+        <section class="recherche-section hide">
             <div class="search-box">
                 <label for="search" class="label-search">Ajouter un autre produit</label>
                 <input type="search" id="search">
             </div>
-            <div class="product-cart"></div>
-            <template class="product-data">
-                    <div class="cart">
-                        <!-- <div class="produit-image">
-                            <img src="https://www.thedailymeal.com/img/gallery/the-one-ingredient-that-will-make-or-break-your-at-home-cappuccino/intro-1670419517.jpg"
-                                alt="">
-                        </div> -->
-                        <div class="name-product"></div>
-                        <div class="category-product"></div>
-                    </div>             
-            </template>
+            <div class="product-cart "></div>
+            <div class="product-data hide">
+                <div class="cart">
+                    <div class="name-product"></div>
+                    <div class="price-product"></div>
+                    <div class="category-product"></div>
+                    <button class="button">add</button>
+                </div>
+            </div>
+            <button class="sortir">sortir</button>
         </section>
         <section class="information-paiement hide">
             <div class="title">

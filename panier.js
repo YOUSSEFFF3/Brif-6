@@ -11,27 +11,128 @@ const coffeeProducts = [
     { id: "c9", name: "Filtres Papier V60 (x100)", category: "Accessoire", price: 6.50, image: "filters.jpg" },
     { id: "c10", name: "Tote Bag 'Coffee Lover'", category: "Accessoire", price: 12.00, image: "totebag.jpg" }
 ];
-const productData=document.querySelector(".product-data")
-const productContainer=document.querySelector(".product-cart")
-console.log(document.querySelector(".product-data"));
+const productData = document.querySelector(".product-data")
 
-function data() {
-    coffeeProducts.forEach(key => {
-        const productName=document.querySelector(".name-product")
-        console.log(key);
-        console.log(productData);
-        const  categoryProduct=document.querySelector(".category-product")
-        const card=productData.content.cloneNode(true).children[0]
-        console.log(card);
-        // console.log(coffeeProducts[key]);
+const productContainer = document.querySelector(".product-cart")
+// const panieSearch=document.
+
+// console.log(document.querySelector(".product-data"));
+
+const searchInput = document.querySelector("#search")
+
+let commend_button = document.querySelector("#commend-button")
+
+let card_section = document.querySelector(".information-paiement")
+
+let panie_section = document.querySelector(".panie-section")
+
+let returne = document.querySelector("#returne-button")
+
+let cherchSection = document.querySelector(".recherche-section")
+
+let sortir = document.querySelector(".sortir")
+
+let ajouter = document.querySelector(".panie-button")
+
+let product = []
+console.log(product);
+
+
+data()
+
+const box = document.querySelector(".panie-box")
+
+const panieContainer = document.querySelector(".panier")
+
+const boutton = document.querySelectorAll(".button")
+const bouttonPlus = document.querySelectorAll(".button-plus")
+const bouttonMoin=document.querySelectorAll(".button-moin")
+bouttonPlus.forEach(plus =>{
+    plus.addEventListener("click",(Z)=>{
+        const target=Z.target.closest(".panie-box")
+        console.log(target);
+        let quantity =target.querySelector(".conter>span")
+        console.log(target.querySelector(".conter>span"));
+        quantity.innerHTML= +quantity.innerHTML + 1
         
-        productName.innerHTML=key.name
+    })
+})
+bouttonMoin.forEach(plus =>{
+    plus.addEventListener("click",(Z)=>{
+        const target=Z.target.closest(".panie-box")
+        console.log(target);
+        let quantity =target.querySelector(".conter>span")
+        console.log(target.querySelector(".conter>span"));
+       
+        quantity.innerHTML= +quantity.innerHTML - 1
+         let
+    })
+})
 
-        categoryProduct.textContent= key.category
+// console.log(boutton);
+boutton.forEach(pic => {
+    pic.addEventListener("click", (e) => {
+        const varialble = e.target.closest(".cart")
+        console.log(varialble);
+        let price = varialble.querySelector(".price-product").innerHTML
+        let name = varialble.querySelector(".name-product").innerHTML   
+        // console.log(a);
+        productPanie(name,price)
+        
+        panie_section.classList.remove("hide")
+        card_section.classList.add("hide")
+        cherchSection.classList.add("hide")
+
+    })
+
+});
+//*********************input search donne le contenue de l'object********** */
+searchInput.addEventListener("input", (e) => {
+    const valuee = e.target.value.toLowerCase()
+    console.log(valuee);
+    console.log(product);
+    product.forEach(prod => {
+        const isVisibel = prod.name.toLowerCase().includes(valuee)
+        // console.log(prod.name.includes(valuee));
+        // console.log(isVisibel);
+        prod.element.classList.toggle("hide", !isVisibel)
+    });
+})
+//***************clone de l HTML box panie**************** */
+function productPanie(text,number) {
+    const panie = box.cloneNode(true)
+    console.log(panie);
+    const paniePrice = panie.querySelector(".product-price")
+    const panieName = panie.querySelector(".c2-Cappuccino-Mousseux")
+    const defaultt = panie.querySelector(".c2-quantity")
+    console.log(defaultt);
+    
+    defaultt.innerHTML = 1
+    // console.log(panieName.innerHTML); 
+    panieName.innerHTML = text
+    paniePrice.innerHTML=number+".00 DH"
+    panieContainer.append(panie)
+    console.log(panieContainer);
+    
+}
+
+
+
+//******************* */ donnais de le grand object**********************$ 
+function data() {
+    product = coffeeProducts.map(key => {
+        const card = productData.cloneNode(true).children[0]
+        const productName = card.querySelector(".name-product")
+         const priceSearch = card.querySelector(".price-product")
+        const categoryProduct = card.querySelector(".category-product")
+        productName.innerHTML = key.name
+        priceSearch.innerHTML = key.price
+        // categoryProduct.textContent= key.category
         productContainer.append(card)
+        return { name: key.name, element: card ,price:key.price}
     });
 }
-data()
+
 
 // 2. Le tableau des produits dans le panier par défaut (avec un accessoire)
 let coffeeCart = [
@@ -64,25 +165,31 @@ for (const key in coffeeCart) {
 
     object.innerHTML = `${coffeeCart[key].name} `
     console.log(coffeeCart[key].name);
-    let contiti = document.getElementsByClassName(`${coffeeCart[key].id}-${coffeeCart[key].quantity}`)
+    let contiti = document.querySelector(`.${coffeeCart[key].id}-quantity`)
     contiti.innerHTML = `${coffeeCart[key].quantity} `
-    console.log(contiti);
-
+    console.log(`${coffeeCart[key].quantity} `);
+    let price= document.querySelector(`#${coffeeCart[key].id}-price`)
+    console.log(price);
+price.innerHTML = `${coffeeCart[key].price}.00 DH `
 }
-let commend_button = document.querySelector("#commend-button")
-let card_section = document.querySelector(".information-paiement")
-let panie_section = document.querySelector(".panie-section")
-let returne = document.querySelector("#returne-button")
-
 commend_button.addEventListener("click", () => {
     panie_section.classList.add("hide")
     card_section.classList.remove("hide")
-    console.log("a");
+    // console.log("a");
 })
-
-
+ajouter.addEventListener("click", () => {
+    cherchSection.classList.remove("hide")
+    card_section.classList.add("hide")
+    panie_section.classList.add("hide")
+})
+sortir.addEventListener("click", () => {
+    panie_section.classList.remove("hide")
+    card_section.classList.add("hide")
+    cherchSection.classList.add("hide")
+    // console.log("a");
+})
 returne.addEventListener("click", () => {
     card_section.classList.add("hide")
     panie_section.classList.remove("hide")
-    console.log("a");
+    // console.log("a");
 })
