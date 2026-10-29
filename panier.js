@@ -73,6 +73,7 @@ function Plus() {
             let quantity = target.querySelector(".conter>span")
             console.log(target.querySelector(".conter>span"));
             quantity.innerHTML = +quantity.innerHTML + 1
+            total()
 
         })
     })
@@ -87,6 +88,7 @@ function Moin() {
             console.log(target.querySelector(".conter>span"));
             if (quantity.innerHTML > 0) {
                 quantity.innerHTML = +quantity.innerHTML - 1
+                total()
             }
         })
     })
@@ -119,6 +121,8 @@ function productPanie(text, number) {
     paniePrice.innerHTML = number + " DH"
     panieContainer.append(panie)
     console.log(panieContainer);
+    //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    paniePrice.dataset.unitPrice = number
 
 }
 //******************* */ donnais de le grand object**********************$ 
@@ -172,7 +176,10 @@ for (const key in coffeeCart) {
     let price = document.querySelector(`#${coffeeCart[key].id}-price`)
     console.log(price);
     price.innerHTML = `${coffeeCart[key].price} DH `
+    //$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+    price.dataset.unitPrice = coffeeCart[key].price
 }
+total()
 commend_button.addEventListener("click", () => {
     panie_section.classList.add("hide")
     card_section.classList.remove("hide")
@@ -194,7 +201,34 @@ returne.addEventListener("click", () => {
     panie_section.classList.remove("hide")
     // console.log("a");
 })
-function total() {
+//$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+ function total() {
+    let totalPanier = 0;
+
+    const boxes = document.querySelectorAll(".panier .panie-box");
+
+    boxes.forEach(box => {
+        const price = box.querySelector(".product-price");
+        console.log(price);
+        
+        const quantity = box.querySelector(".conter > span");
+
+        const unitPrice = Number(price.dataset.unitPrice);
+        console.log(unitPrice);
+        
+        const quantite = Number(quantity.innerHTML);
+
+        const productTotal = unitPrice * quantite;
+
+        price.innerHTML = productTotal.toFixed(2) + " DH";
+
+        totalPanier += productTotal;
+    });
+
+    document.querySelector("#price").innerHTML =
+        totalPanier.toFixed(2) + " DH";
 }
+
+
 function name(params) { 
 }
