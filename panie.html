@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main>
+        <div class="header">
+            <p>
+                Du grain à votre tasse. Un café qui vous ressemble
+            </p>
+        </div>
+        <div class="first-section">
+            <div class="logo">
+                <div class="mug">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAACtUlEQVR4nO2ZS4iNYRjHf06DTGKkmJoNsnBfYTEWCiWmFFaU20gpJTGZlYxxGRaEBWsZWUi5LMhGYoEhO8q1SSfZuI4ZQ+Poreerp7fzXc/3veccvl+9mzn/7/8873zf+7w3yPk/OAp8AbqpU4aBEjBEDXEEGAB6QnSjJHnT/lBDDElSw5Jk3XVgRCVWCNDlHciKvAPVZjDGIK7JMnoI+AwcjqA9BnyPqM2pezYARTXwqtU+AJuSdOBjDSRfkmbGWGxe1UDiJWn9STpwXRmYz8k161T8W0kMepTBcdzTreKfTGKwWRncxj03VPztSQwWWpXANf0q/j3gHfAVeA5cABaFGYwFfiqTZtwxOeLgPhOy/qJPiVe6y59lMSqUWcr4ck4JO93lzz4ryV5gATAJWGyNj1/APD+jrUp42WEHLqq4p8v8XpDC4mnO+xnNrXQySchbFddvsK5Qmpd+Rqan35RwJtkzTcUzS+8GH90E6zPy5a4S7iB72lW8OwG6cUr3O8iwy/E46FXxDgToWqN+3kusCS1o25gGRRVvaYDurNJdCjJskBnQE5uBnRWzVJxPwGgf3Rz57j3t6jDja0q8h+zYreKYUlqO2cB7pXsc5avYoh54QHbcV3HWl6mIO+XNeJofwPwoxk3qSMScA7VkkHyLOmMyxy7j5e+NwDbgmTU7m+OcVXEC3FQP78+gA53K/ymwC7gi9wn2+ueNrJZjsVEZvE65GhXEM2zhNiCXJOatxGaMlNHIIz8GbSGJmzeyF5hSaaCDyvQh6fFI+Zo9yAvgKtAhVSc1plqbnLUpeJpqo6tKs4srJS9gUSpUUpqsmfcEDmiU/akXtE92UGZxFRWjXQ48sf4ZE3FEm3UvUGkbAdbgmHZ1N1BJMx7GqyrMAE7JUUeczgzKM+bAanq1ks/J+Zf4Cyv+u3OFoE09AAAAAElFTkSuQmCC"
+                        alt="coffee">
+                </div>
+                <div class="h1">
+                    <h1>BRUME</h1>
+                </div>
+            </div>
+            <nav class="navigation">
+                <div>
+                    <li><a href="#">L’atelier café</a></li>
+                    <li><a href="#">Notre savoir-faire</a></li>
+                    <li><a href="#">Besoin d’aide ?</a></li>
+                </div>
+            </nav>
+            <div class="panie">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAACv0lEQVR4nO2Zz28NURTHP/VaEokfsRAhUeFFJTYkZaGWQrGx0+5IEwuJlbKoohZq4VcrXVgoW0nVhl01ihBtwh8gCKE2Nhqkj4eRm9wm39zM9M2YO+89yXySk5eck/s950xn7q9CTk5Ozv9GEbgFfADKQJDSylbLaG7IuvhTwA8PRUdZCTgLNGRR/NEMCw8cM014ZZPzuowBrUDBg3bBao2J/i+gBY9cEfEJoAn/FIBxyXPJp/gLEd5NduyRPCanFxbKh/sHWEZ2LLU5ApvT5E7NVnkqr8meN5Jviw/BwyI4QvbckXyHfAheE0GzDmRNr+Qb9CH4WAT3kT37Jd+jtGJmRfwigqvJnjWSb+ZfVuXFwE07OKgTmwFu2NoqcqEOCg4i7HycBibqoNAgwh7GaWBEBnRRe7qSTuM9MmCI2jMk9ZjaKtIuA55Re55KPaa2iqyUAd8jtsz9wKz9dU9rb60VY/jn0zIsAL5KPauIyTs74DewJCQ+a+M/na11T8SfO8rfZDUCqxl2DpkbN00C9gJPgGMR8WkRbhZ/n/j7YvjXif9jSJ5Oid/HI5Mi3JaigZ3ifx6S56LEzyUt0rz7myO+gVER7kjRQKf4zS7URU9oB5I2cM8ONL8uAyLcnaKBE+K/GpLns8TN65aIua/fnJBWOLFuER5I0cCg+I/Pc7gxs1dipkR8lxPrkNhoigbuiv9gSA1F25g79cbiuoifdGJtEptM0cCU+HfgmSMiftuJNUfMz0kb+CT+tQkmkVi0ivgrJxa1ACVdyGYjFsRKk0gsFkmRYdcpYVuApFuJ/ohtxHK5XvlGCl7KkzOXTtWi3dcF12URGvd0F1qJgj24eLlibHEudR8A24BG/NMIbHdWX5N7Y1rhMyJYbev18WQabBOlKhZeAk7jmfXAMPDe07+WXCtb7WGbKycnJ4f65y8UHzDsWPsV7QAAAABJRU5ErkJggg=="
+                    alt="shopping-basket">
+                <div>
+                    <!-- conter -->
+                </div>
+            </div>
+        </div>
+        <section class="panie-section ">
+            <div class="panier">
+                <div class="panie-box">
+                    <div class="text">
+                        <div class="produit-image">
+                            <img src="https://advisorcoffee.com/wp-content/uploads/2025/11/What-Is-A-Red-Eye-Coffee-Its-one-of-the-strongest.jpg" alt="">
+                        </div>
+                         <div>
+                            <span class="c2-Cappuccino-Mousseux cafe">hjhkhihkh</span>
+                        </div>
+                        <div class="product-price" id="c2-price">
+                            <span>total</span>
+                        </div>
+                        <!-- <div class="c2-Cappuccino-Mousseux cafe">
+                        </div> -->
+                    </div>
+                    <div>
+                        <button class="button-plus"> + </button>
+                    </div>
+                    <div class="conter">
+                        <span class="c2-quantity">2</span>
+                    </div>
+                    <div>
+                        <button class="button-moin"> - </button>
+                    </div>
+                </div>
+                <div class="panie-box">
+                    <div class="text">
+                        <div class="produit-image">
+                            <img src="https://www.thedailymeal.com/img/gallery/the-one-ingredient-that-will-make-or-break-your-at-home-cappuccino/intro-1670419517.jpg"
+                                alt="">
+                        </div>
+                        <div>
+                            <span class="c3-Latte-Caramel cafe">hjhkhihkh</span>
+                        </div>
+                        <div class="product-price" id="c3-price">
+                            <span>total</span>
+                        </div>
+                    </div>
+                    <div>
+                        <button class="button-plus"> + </button>
+                    </div>
+                    <div class="conter">
+                        <span class="c3-quantity">2</span>
+                    </div>
+                    <div>
+                        <button class="button-moin"> - </button>
+                    </div>
+                </div>
+                <div class="panie-box">
+                    <div class="text">
+                        <div class="produit-image">
+                            <img src="https://static.vecteezy.com/system/resources/previews/025/282/026/large_2x/stock-of-mix-a-cup-coffee-latte-more-motive-top-view-foodgraphy-generative-ai-photo.jpg"
+                                alt="">
+                        </div>
+                        <div>
+                            <span class="c8-Mug-Isotherme-Noir cafe">jvhaieuvqiu</span>
+                        </div>
+                        <div class="product-price" id="c8-price">
+                            <span>total</span>
+                        </div>
+                    </div>
+                    <div>
+                        <button class="button-plus"> + </button>
+                    </div>
+                    <div class="conter">
+                        <span class="c8-quantity">2</span>
+                    </div>
+                    <div>
+                        <button class="button-moin"> - </button>
+                    </div>
+                </div>
+            </div>
+            <div class="total-box">
+                <span class="total">total</span>
+                <span class="total" id="price">price</span>
+            </div>
+            <div class="panie-button">
+                <button> Ajouter un autre produit →</button>
+            </div>
+            <div class="panie-button" id="commend-button">
+                <button> commander maintenant </button>
+            </div>
+        </section>
+        <section class="recherche-section hide">
+            <div class="search-box">
+                <label for="search" class="label-search">Ajouter un autre produit</label>
+                <input type="search" id="search">
+            </div>
+            <div class="product-cart "></div>
+            <div class="product-data hide">
+                <div class="cart">
+                    <div class="name-product"></div>
+                    <div class="price-product"></div>
+                    <div class="category-product"></div>
+                    <button class="button">add</button>
+                </div>
+            </div>
+            <button class="sortir">sortir</button>
+        </section>
+        <section class="information-paiement ">
+            <div class="title">
+                <img class="card-icon"
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA4ElEQVR4nO3ZTQ6CMBQE4DkG4JHqcfw5AF5L7yS4wNUzJENMLAVNTHiF+ZKunouZtBuegIiIiIzaA7gCeAAwZ6dltoAZFwdh7ctTT91E/4MOwAFACX9KAEdmtNTN3DjsS3h3Ytb+mUVaDgv4VzBrMzYc3l4uLJV3dUUssxNZOpCK6EaQSZFcmIqsoYj9+x2ryNu2n5ZHpiLOmIo4YyrijKmIM5bK23DgcTH3aces92jCZZdxk+fdeWpBFzjsuMmr4E/FEk9mTS6z6wU/WX89ySX2IPDKhhVqln8riIiIbNIL9scKaak2+18AAAAASUVORK5CYII="
+                    alt="bank-card-back-side--v1">
+                <h2 class="titre">information-paiement</h2>
+            </div>
+            <form id="demoForm">
+            <div class="nomination">
+                <div class="prenom">
+                    <span> Prènom * </span>
+                    <input type="text"id="prènom" name="prènom">
+                </div>
+                <div class="nome">
+                    <span> Nome * </span>
+                    <input type="text" id="name" name="name">
+                </div>
+            </div>
+            <div class="email">
+                <span> email * </span>
+                <input type="email" id="email" name="email">
+            </div>
+            <div class="adrres">
+                <span> adresse de livraison* </span>
+                <input type="text" name="adrres" id="adrres">
+            </div>
+            <div class="code-ville">
+                <div class="code-postal">
+                    <span> code postl * </span>
+                    <input type="text" name="code-postal" id="code-postal">
+                </div>
+                <div class="ville">
+                    <span> ville * </span>
+                    <input type="text" name="ville" id="ville">
+                </div>
+            </div>
+            <div>
+                <div class="small-title">
+                    <h2>information de cart boncaire</h2>
+                </div>
+                <div class="cart-number">
+                    <span> Numero de cart * </span>
+                    <input type="text" name="cart-number" id="cart-number">
+                </div>
+            </div>
+            <div class="date-code">
+                <div class="date-expiration">
+                    <span>Date d'expiration *</span>
+                    <input type="date" name="date" id="date">
+                </div>
+                <div class="cart-code">
+                    <span> CVV *</span>
+                    <input type="text" name="" id="">
+                </div>
+            </div>
+            <div class="button-submit">
+                <button type="submit">submit</button>
+            </div>
+            </form>
+            <div class="button-submit" id="returne-button">
+                <button>return</button>
+            </div>
+        </section>
+        <footer>
+
+        </footer>
+
+    </main>
+</body>
+<script src="panier.js"></script>
+</html>
