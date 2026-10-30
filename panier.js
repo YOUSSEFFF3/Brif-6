@@ -64,8 +64,6 @@ boutton.forEach(pic => {
 });
 
 function Plus() {
-
-
     bouttonPlus.forEach(plus => {
         plus.addEventListener("click", (Z) => {
             const target = Z.target.closest(".panie-box")
@@ -89,7 +87,10 @@ function Moin() {
             if (quantity.innerHTML > 0) {
                 quantity.innerHTML = +quantity.innerHTML - 1
                 total()
-            }
+            } else target.classList.add("hide")
+
+
+
         })
     })
 }
@@ -202,7 +203,7 @@ returne.addEventListener("click", () => {
     // console.log("a");
 })
 //$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
- function total() {
+function total() {
     let totalPanier = 0;
 
     const boxes = document.querySelectorAll(".panier .panie-box");
@@ -210,12 +211,12 @@ returne.addEventListener("click", () => {
     boxes.forEach(box => {
         const price = box.querySelector(".product-price");
         console.log(price);
-        
+
         const quantity = box.querySelector(".conter > span");
 
         const unitPrice = Number(price.dataset.unitPrice);
-        console.log(unitPrice);
-        
+        console.log(price.dataset.unitPrice);
+
         const quantite = Number(quantity.innerHTML);
 
         const productTotal = unitPrice * quantite;
@@ -229,6 +230,37 @@ returne.addEventListener("click", () => {
         totalPanier.toFixed(2) + " DH";
 }
 
+/////////validation ****************************$$
+const emailPattern = "[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
+const cardPattern = "^(?:4[0-9]{12}(?:[0-9]{3})?|5[1-5][0-9]{14}|3[47][0-9]{13}|3[0-9]{13}|6(?:011|5[0-9]{2})[0-9]{12})$"
+const nomPrenom = "^[a-zA-Z]{3,9}$"
+const nome=document.querySelector("input[name=\"name\"]")
+const prenom=document.querySelector("input[name=\"prènom\"]")
+const email=document.querySelector("input[name=\"email\"]")
+const creditCard=document.querySelector("input[name=\"cart-number\"]")
+// const form = document.querySelector('#demoForm');
+const formSub = document.querySelector('#demoForm')
 
-function name(params) { 
+formSub.addEventListener('submit', (event) => {
+    event.preventDefault(); // stop the page from reloading
+   
+    //validation
+    validation(nomPrenom, nome)
+    validation(nomPrenom, prenom)
+    validation(emailPattern, email)
+    validation(cardPattern, creditCard)
+    console.log( validation(nomPrenom, nome));
+    
+
+
+});
+
+
+function validation(pattern, element) {
+    element.addEventListener('input', (event) => {
+        console.log('value is now', event.target.value);
+        if (pattern.test(event.target.value)) {
+            b.classList.remove("wrong")
+        } else b.classList.add("wrong")
+    });
 }

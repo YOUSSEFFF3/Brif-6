@@ -12,6 +12,9 @@
     .navigation>div {
         display: none;
     }
+    .wrong{
+        outline: 3px solid red ;
+    }
 
     .first-section {
         display: flex;

@@ -140,39 +140,40 @@
             </div>
             <button class="sortir">sortir</button>
         </section>
-        <section class="information-paiement hide">
+        <section class="information-paiement ">
             <div class="title">
                 <img class="card-icon"
                     src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA4ElEQVR4nO3ZTQ6CMBQE4DkG4JHqcfw5AF5L7yS4wNUzJENMLAVNTHiF+ZKunouZtBuegIiIiIzaA7gCeAAwZ6dltoAZFwdh7ctTT91E/4MOwAFACX9KAEdmtNTN3DjsS3h3Ytb+mUVaDgv4VzBrMzYc3l4uLJV3dUUssxNZOpCK6EaQSZFcmIqsoYj9+x2ryNu2n5ZHpiLOmIo4YyrijKmIM5bK23DgcTH3aces92jCZZdxk+fdeWpBFzjsuMmr4E/FEk9mTS6z6wU/WX89ySX2IPDKhhVqln8riIiIbNIL9scKaak2+18AAAAASUVORK5CYII="
                     alt="bank-card-back-side--v1">
                 <h2 class="titre">information-paiement</h2>
             </div>
+            <form id="demoForm">
             <div class="nomination">
                 <div class="prenom">
                     <span> Prènom * </span>
-                    <input type="text" name="">
+                    <input type="text"id="prènom" name="prènom">
                 </div>
                 <div class="nome">
                     <span> Nome * </span>
-                    <input type="text" name="">
+                    <input type="text" id="name" name="name">
                 </div>
             </div>
             <div class="email">
                 <span> email * </span>
-                <input type="email" name="" id="">
+                <input type="email" id="email" name="email">
             </div>
             <div class="adrres">
                 <span> adresse de livraison* </span>
-                <input type="text" name="" id="">
+                <input type="text" name="adrres" id="adrres">
             </div>
             <div class="code-ville">
                 <div class="code-postal">
                     <span> code postl * </span>
-                    <input type="text" name="">
+                    <input type="text" name="code-postal" id="code-postal">
                 </div>
                 <div class="ville">
                     <span> ville * </span>
-                    <input type="text" name="">
+                    <input type="text" name="ville" id="ville">
                 </div>
             </div>
             <div>
@@ -181,13 +182,13 @@
                 </div>
                 <div class="cart-number">
                     <span> Numero de cart * </span>
-                    <input type="text" name="">
+                    <input type="text" name="cart-number" id="cart-number">
                 </div>
             </div>
             <div class="date-code">
                 <div class="date-expiration">
                     <span>Date d'expiration *</span>
-                    <input type="date" name="" id="">
+                    <input type="date" name="date" id="date">
                 </div>
                 <div class="cart-code">
                     <span> CVV *</span>
@@ -195,8 +196,9 @@
                 </div>
             </div>
             <div class="button-submit">
-                <button>submit</button>
+                <button type="submit">submit</button>
             </div>
+            </form>
             <div class="button-submit" id="returne-button">
                 <button>return</button>
             </div>
