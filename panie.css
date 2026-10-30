@@ -1,0 +1,422 @@
+* {
+    margin: 0%;
+    padding: 0cap
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&display=swap');
+@media screen and (min-width:300px) {
+    .header {
+        display: none;
+    }
+
+    .navigation>div {
+        display: none;
+    }
+    .wrong{
+        outline: 3px solid red ;
+    }
+
+    .first-section {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        border: 3px solid rgb(123, 120, 120);
+        height: 100px;
+    }
+
+    .logo {
+        display: flex;
+        flex-direction: row;
+        /* border: 1px solid red; */
+        /* width: 50%; */
+        align-items: center;
+    }
+
+    .panie-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: #E8DBC7;
+        /* height: 100vh; */
+        gap: 20px;
+    }
+
+    .panier {
+        background-color: #E8DBC7;
+        border: 3px solid rgb(81, 81, 83);
+        border-radius: 15px;
+        margin: 1rem;
+        width: 400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        gap: 10px;
+
+    }
+
+    .panie-button {
+        /* background-color: brown; */
+        width: 300px;
+        height: 16vh;
+        border-radius: 15px;
+
+    }
+
+    .panie-button>button {
+        width: 90%;
+        height: 80%;
+        margin: 10px;
+        color: #FFFFFF;
+        border-radius: 15px;
+        background-color: #394B32;
+        border-color: #2c3a27;
+    }
+
+    .panie-box {
+        background-color: #FFFFFF;
+        width: 400px;
+        height: 15vh;
+        border-radius: 15px;
+        display: flex;
+        align-items: center;
+        border-color: #DFD5C8;
+    }
+
+    .text {
+        display: flex;
+        width: 60%;
+        justify-content: space-evenly;
+        align-items: center;
+        border: 2px solid rgb(178, 173, 173);
+        background-color: antiquewhite;
+        height: 3rem;
+        margin-left: 1rem;
+        border-radius: 15px;
+        /* align-items: center; */
+    }
+
+    .text>span {
+        margin-top: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .produit-image {
+        border: 1px solid red;
+        width: 50px;
+        /* margin: 5px; */
+        border-radius: 15px;
+    }
+
+    .produit-image>img {
+        width: 100%;
+        height: 100%;
+        border-radius: 15px;
+    }
+
+    .hide {
+        display: none !important;
+    }
+
+    .button-plus {
+        width: 1.5rem;
+        height: 1.5rem;
+        margin-left: 6px;
+        border-radius: 30px;
+    }
+
+    .button-moin {
+        width: 1.5rem;
+        height: 1.5rem;
+        border-radius: 30px;
+    }
+
+    .conter {
+        width: 1.5rem;
+        height: 1.5rem;
+        background-color: cornsilk;
+        margin-left: 6px;
+        margin-right: 6px;
+        border-radius: 30px;
+        border: 2px solid green
+    }
+
+    .conter>span {
+        /* border: 1px solid red; */
+        margin: 6px;
+    }
+
+    .cafe {
+        font-size: 13px;
+        color: #2c3a27;
+        border: 2px solid #FFFFFF;
+        margin-bottom: 8px;
+
+    }
+
+    .total-box {
+        display: flex;
+        background-color: #fff;
+        height: 3rem;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 80%;
+    }
+
+    .total {
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 500;
+        font-style: Medium;
+        font-size: 30px;
+        line-height: 145%;
+        letter-spacing: 0%;
+    }
+
+
+    /* **********************section de paiement************************* */
+    .information-paiement {
+        display: flex;
+        flex-direction: column;
+
+        margin: 8px;
+        gap: 1rem;
+        width: 400px;
+        border: 1px solid #394B32;
+    }
+
+    .title {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .nomination {
+        display: flex;
+        margin-top: 10px;
+        justify-content: space-around;
+        align-items: center;
+        /* border-bottom: 1px solid rgb(53, 53, 157); */
+        margin-left: 5px;
+    }
+
+    .prenom>input {
+        width: 150px;
+        margin: 5px;
+    }
+
+    .nome>input {
+        width: 150px;
+        margin: 5px;
+    }
+
+    .email {
+        display: flex;
+        flex-direction: column;
+        margin-left: 5px;
+    }
+
+    .email>input {
+        width: 200px;
+        margin: 5px;
+    }
+
+    .adrres {
+        display: flex;
+        flex-direction: column;
+        margin-left: 5px;
+    }
+
+    .adrres>input {
+        width: 200px;
+        margin: 5px;
+    }
+
+    .code-ville {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        margin-left: 5px;
+    }
+
+    .code-postal>input {
+        width: 150px;
+        margin: 5px;
+    }
+
+    .ville>input {
+        width: 150px;
+        margin: 5px;
+    }
+
+    .small-title {
+        margin: 10px;
+    }
+
+    .cart-number {
+        display: flex;
+        flex-direction: column;
+        margin-left: 5px;
+
+    }
+
+    .cart-number>input {
+        width: 250px;
+        margin: 5px;
+    }
+
+    .date-code {
+        display: flex;
+        justify-content: space-around;
+        margin-left: 5px;
+        align-items: center;
+    }
+
+    .date-expiration>input {
+        width: 150px;
+        margin: 5px;
+    }
+
+    .cart-code>input {
+        width: 150px;
+        margin: 5px;
+    }
+
+    .button-submit {
+        /* border: 1px solid red; */
+        margin: 2rem;
+        height: 10vh;
+    }
+
+    .button-submit>button {
+        width: 100%;
+        height: 100%;
+        background-color: rgb(37, 113, 205);
+        border: 0;
+        border-radius: 15px;
+        color: #E8DBC7;
+        font-size: x-large;
+
+    }
+
+    /* $$$$$$$$$$$$$$$$$ search section  $$$$$$$$$$$$$$ */
+    .search-box {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        margin-top: 1rem;
+        padding-left: 5px;
+    }
+
+    .search-box>input {
+        font-size: large;
+        margin: 0 1rem;
+    }
+
+    .label-search {
+        font-size: x-large;
+    }
+
+    .product-cart {
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+        margin: 10px 15px;
+        justify-content: center;
+        border: 3px solid black;
+    }
+
+    .cart {
+        border: 3px solid rgb(2, 2, 2);
+        padding: .5rem;
+        font-size: x-large;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        margin: 1rem;
+        border-radius: 15px;
+    }
+
+    .recherche-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .button {
+        width: 3rem;
+        height: 1.5rem;
+    }
+
+    .sortir {
+        width: 200px;
+        height: 3rem;
+        border: 3px solid red;
+        /* margin-left: 20%; */
+
+    }
+
+
+
+}
+
+@media screen and (min-width:768px) {
+    .header {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        background-color: rgb(1, 45, 1);
+        color: antiquewhite;
+        padding: 10px;
+    }
+
+    .first-section {
+        border: 2px solid rgb(96, 94, 94);
+    }
+
+    .logo {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        /* margin-left: 2rem; */
+    }
+
+    .first-section {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .navigation>div>li>a {
+        text-decoration: none;
+        color: rgb(93, 92, 91);
+    }
+
+    .navigation>div {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 400px;
+        align-items: center;
+        /* border:1px solid red; */
+        height: 100px;
+        list-style: none;
+    }
+
+    .h1 {
+        font-family: 'Playfair Display', serif;
+        font-weight: 900;
+        margin: 4px;
+    }
+
+    .panie {
+        /* border: 3px solid red; */
+        padding-top: 13px;
+    }
+}
