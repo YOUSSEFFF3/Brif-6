@@ -363,6 +363,301 @@
 
 
 
+
+.hidden {
+    display: none !important;
+}
+
+
+@media screen and (min-width:375px) {
+    .header {
+        display: none;
+    }
+
+    .navigation>div {
+        display: none;
+    }
+
+    .first-section {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        border: 3px solid rgb(123, 120, 120);
+        height: 100px;
+    }
+
+    .logo {
+        display: flex;
+        flex-direction: row;
+        /* border: 1px solid red; */
+        /* width: 50%; */
+        align-items: center;
+    }
+
+    .hero-section {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        align-items: center;
+        background-color: cornsilk;
+        padding-bottom: 2rem;
+    }
+
+    .image>img {
+        margin-top: 10px;
+        width: 300px;
+        border-radius: 15px;
+    }
+
+    .link {
+        display: flex;
+        flex-direction: row;
+
+    }
+
+    .links {
+        background-color: cornsilk;
+    }
+
+    .text-box {
+        width: 370px;
+    }
+
+    .a>a {
+        text-decoration: none;
+        color: rgb(79, 78, 76);
+        padding-left: 6px;
+        font-weight: 500;
+        font-style: Medium;
+        font-size: 11px;
+        line-height: 145%;
+        letter-spacing: 0%;
+
+    }
+
+    .a {
+        padding-left: 6px;
+    }
+
+    .text {
+        display: flex;
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    .paragraphe {
+        font-weight: 500;
+        font-style: Medium;
+        font-size: 10px;
+        line-height: 145%;
+        letter-spacing: 0%;
+    }
+
+    .small-title {
+        margin-top: 10px;
+        font-weight: 300;
+        /* font-style:; */
+        font-size: 20px;
+        line-height: 150.1%;
+        letter-spacing: 0%;
+    }
+
+    .p {
+        margin-top: 2rem;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 145%;
+        letter-spacing: 0%;
+    }
+
+    .option-title {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .titer {
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-weight: 700;
+        font-style: Bold;
+        font-size: 14px;
+        line-height: 145%;
+        letter-spacing: 0%;
+        margin: 10px 0;
+    }
+
+    .les-choix {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        height: fit-content;
+    }
+
+    .choises-typ {
+        border: 2px solid rgb(191, 181, 181);
+        border-radius: 15px;
+    }
+
+    .choises {
+        height: 1rem;
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    /* #deux-chois{
+    padding-left: 4rem;
+    padding-right: 4rem; */
+
+    input[type="radio"] {
+        appearance: none;
+    }
+
+    .information {
+        margin-top: 1.5rem;
+
+    }
+
+    .barre-d-action {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .price-box {
+        display: flex;
+        flex-direction: column;
+        /* border: 1px solid red; */
+
+    }
+
+    .price {
+        font-weight: 500;
+        font-style: Medium;
+        font-size: 30px;
+        line-height: 145%;
+        letter-spacing: 0%;
+    }
+
+    .small {
+        color: rgb(122, 130, 130);
+        font-weight: 400;
+        font-size: 11px;
+        line-height: 145%;
+        letter-spacing: 0%;
+    }
+
+    .button {
+        /* border: 1px solid red; */
+        width: 150px;
+        height: 56px;
+    }
+
+    .button>button {
+        width: 100%;
+        height: 100%;
+        background-color: #394B32;
+        border: 0;
+        color: #fff;
+        border-radius: 15px;
+    }
+
+    .footer {
+        display: flex;
+        justify-content: space-around;
+        height: 3rem;
+        background-color: cornsilk;
+    }
+
+    .Bill-section {
+        background-color: cornsilk;
+        display: flex;
+        flex-direction: column;
+
+        padding: 1rem;
+    }
+
+    .nome-et-modification {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 1rem;
+        align-items: center;
+    }
+
+    .h3 {
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-weight: 500;
+        font-style: Medium;
+        font-size: 25px;
+        line-height: 145%;
+        letter-spacing: 0%;
+    }
+
+    .modification>a {
+        /* text-decoration: none; */
+        color: #394B32;
+    }
+
+    table {
+
+        width: 300px;
+        height: 40vh;
+        /* border: 6px solid red; */
+    }
+
+
+    .tout-la-ticket {
+        background-color: #fff;
+        border-radius: 15px;
+        height: 80vh;
+        width: 350px;
+
+    }
+
+    .boutton {
+        margin-left: 2rem;
+        margin-top: 2rem;
+
+    }
+
+    .boutto>button {
+        color: #394B32;
+        background-color: #E9EEDC;
+        padding-left: 0;
+    }
+
+    .table {
+        width: 200px;
+        height: 100vh;
+    }
+
+    .small1 {
+        color: rgb(122, 130, 130);
+        font-weight: 400;
+        font-size: 11px;
+        line-height: 145%;
+        letter-spacing: 0%;
+        text-align: left;
+
+    }
+
+    .small2 {
+        color: rgb(122, 130, 130);
+        font-weight: 400;
+        font-size: 11px;
+        line-height: 145%;
+        letter-spacing: 0%;
+        text-align: right;
+
+    }
+
 }
 
 @media screen and (min-width:768px) {
@@ -377,6 +672,7 @@
 
     .first-section {
         border: 2px solid rgb(96, 94, 94);
+
     }
 
     .logo {
@@ -391,6 +687,11 @@
         display: flex;
         flex-direction: row;
         justify-content: space-around;
+        background-color: cornsilk;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+
     }
 
     .navigation>div>li>a {
@@ -419,4 +720,200 @@
         /* border: 3px solid red; */
         padding-top: 13px;
     }
+
+    .hero-section {
+        background-color: cornsilk;
+        padding: 2rem;
+        /* border: 1px solid red; */
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .image {
+        /* border: 1px solid red; */
+        width: 50%;
+    }
+
+    .image>img {
+        height: auto;
+        border-radius: 15px;
+        width: 100%;
+
+        /* border:1px solid red */
+    }
+
+    .text-box {
+        width: 40%;
+    }
+
+    .link {
+        display: flex;
+        flex-direction: row;
+
+    }
+
+    .a>a {
+        text-decoration: none;
+        color: rgb(79, 78, 76);
+        padding-left: 6px;
+        font-weight: 500;
+        font-style: Medium;
+        font-size: 11px;
+        line-height: 145%;
+        letter-spacing: 0%;
+
+    }
+
+    .a {
+        padding-left: 6px;
+    }
+
+    .text {
+        display: flex;
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    .paragraphe {
+        font-weight: 500;
+        font-style: Medium;
+        font-size: 10px;
+        line-height: 145%;
+        letter-spacing: 0%;
+    }
+
+    .small-title {
+        margin-top: 10px;
+        font-weight: 500;
+        /* font-style:; */
+        font-size: 48px;
+        line-height: 110.1%;
+        letter-spacing: 0%;
+    }
+
+    .p {
+        margin-top: 2rem;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 145%;
+        letter-spacing: 0%;
+    }
+
+    .option-title {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .titer {
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-weight: 700;
+        font-style: Bold;
+        font-size: 14px;
+        line-height: 145%;
+        letter-spacing: 0%;
+        margin: 10px 0;
+    }
+
+    .les-choix {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        height: fit-content;
+    }
+
+    .choises-typ {
+        border: 2px solid rgb(191, 181, 181);
+        border-radius: 15px;
+    }
+
+    .choises {
+        height: 1rem;
+        padding: 2rem;
+    }
+
+    #premier-chois {
+        padding-left: 4rem;
+        padding-right: 4rem;
+
+    }
+
+    .selected {
+        background-color: #e8eddd;
+        border: 2px solid #40563b;
+        border-radius: 15px;
+    }
+
+    #deux-chois {
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
+
+    input[type="radio"] {
+        appearance: none;
+    }
+
+    .information {
+        margin-top: 1.5rem;
+
+    }
+
+    .Bill-section {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .the-bille {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        /* border: 1px solid red; */
+
+    }
+
+    .tout-la-ticket {
+        width: 40%;
+        height: 100vh;
+        padding: 2rem;
+
+    }
+
+    .total {
+        display: flex;
+        flex-direction: column;
+        /* border: 1px solid red; */
+        /* align-items: center; */
+        width: 600px;
+
+    }
+
+    .price-box {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    table {
+
+        width: 600px;
+        height: 60vh;
+        /* border: 6px solid red; */
+        padding-left: 1rem;
+    }
+    .small1 {
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 145%;
+        letter-spacing: 0%;
+    }
+    .small2 {
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 145%;
+        letter-spacing: 0%;
+        padding-right: 15px;
+    }
+
 }
