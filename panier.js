@@ -89,8 +89,6 @@ function Moin() {
                 total()
             } else target.classList.add("hide")
 
-
-
         })
     })
 }
