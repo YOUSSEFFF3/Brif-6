@@ -1,0 +1,7 @@
+.hide{
+    display: none !important;
+}
+.erro-message-name{
+    color: aliceblue;
+    /* border: 3px solid #fff; */
+}

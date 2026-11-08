@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-B/GM4XqrwHnWXNOWMbloTmrYXZg10cakYGmpfsR/bbzQ6JAJI4ihuyADKLnBgrCe" crossorigin="anonymous">
+    <link rel="stylesheet" href="wizard.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body>
+    <section class="container">
+        <div class="contains-inline">
+            <ol class="stepper sm:stepper-horizontal">
+                <li class="stepper-item active ">Product information</li>
+                <li class="stepper-item" id="stepper2">Caractéristiques</li>
+                <li class="stepper-item" id="stepper3">Finish</li>
+            </ol>
+        </div>
+        <form id="form">
+            <!-- first stepp -->
+            <div class="first-step ">
+                <div>
+                    <h2>Product information</h2>
+                </div>
+                <div class="input-grp">
+                    <label for="product-name">Product Name*</label>
+                    <input type="text" name="product-name" class="name" required>
+
+                </div>
+                <div class="input-grp">
+                    <label for="product-price">Prix de base*</label>
+                    <input type="number" name="product-price" class="price" required>
+                    <span class="erro-message-price"></span>
+                </div>
+                <div class="input-grp">
+                    <label for="product-image">Image URL*</label>
+                    <input type="url" name="product-image" class="image" required>
+
+                </div>
+
+                <div class="input-grp">
+                    <label for="product-price">réduction*</label>
+                    <input type="checkbox" name="product-price" id="reduction">
+                </div>
+                <div class="donne-reduction hide">
+                    <div class="input-grp">
+                        <label for="product-discount">Pourcentage de réduction*</label>
+                        <input type="number" name="product-discount" class="discount">
+
+                    </div>
+                    <div>
+                        <div class="input-grp">
+                            <label for="product-discount-date">Date de fin*</label>
+                            <input type="date" name="product-discount-date" class="date">
+
+                        </div>
+                    </div>
+                </div>
+                <button class="btn-text theme-primary" id="next-btn">next</button>
+            </div>
+            <div class="second-step  hide">
+                <div>
+                    <h2>Caractéristiques </h2>
+                </div>
+                <div class="input-group mb-3">
+                    <label class="input-group-text" for="inputGroupSelect01">Type of grains</label>
+                    <select class="form-control" id="inputGroupSelect01" required>
+                        <option value="1" selected>Colombie</option>
+                        <option value="2">Éthiopie</option>
+                        <option value="3">Brésil</option>
+                        <option value="3">Mélange Maison</option>
+                    </select>
+                </div>
+                <div class="input-grp">
+                    <label for="product-Intensité ">Niveau de torréfaction*</label>
+                    <div class="form-range" data-bs-bubble>
+                        <input type="range" class="form-range-input" min="0" max="10" value="5" id="rangeBubble">
+                    </div>
+                </div>
+                <div class="input-grp1">
+                    <label for="product-Température">Température *</label>
+                    <input type="radio" name="product-Température" class="chaud" >
+                    <span class="Chaud">Chaud</span>
+                    <input type="radio" name="product-Température" class="glace
+                    ">
+                    <span class="Glacé">Glacé</span>
+                </div>
+                <div class="input-grp2">
+                    <label for="product-Tailles">Tailles disponibles*</label>
+                    <input type="checkbox" name="product-Tailles" id="check-1taille" class="check" >
+                    <span>Small</span>
+                    <input type="checkbox" name="product-Tailles" id="check-2taille" class="check">
+                    <span>Medium</span>
+                    <input type="checkbox" name="product-Tailles" id="check-3taille" class="check">
+                    <span>Large</span>
+                </div>
+                <div class="input-grp3">
+                    <label for="product-lait">Options de lait *</label>
+                    <input type="checkbox" name="product-lait" id="check-1lait" class="check" >
+                    <span class="span">Vache</span>
+                    <input type="checkbox" name="product-lait" id="check-2lait" class="check">
+                    <span>Avoine</span>
+                    <input type="checkbox" name="product-lait" id="check-3lait" class="check">
+                    <span>Soja</span>
+                    <input type="checkbox" name="product-lait" id="check-4lait" class="check">
+                    <span>Amande</span>
+                </div>
+                <div class="input-grp4">
+                    <label for="Suppléments ">Suppléments *</label>
+                    <input type="checkbox" name="Suppléments" id="check-1supl" class="check" >
+                    <span>Vanille</span>
+                    <input type="checkbox" name="Suppléments" id="check-2supl" class="check">
+                    <span>Caramel</span>
+                    <input type="checkbox" name="Suppléments" id="check-3supl" class="check">
+                    <span>Noisette</span>
+                </div>
+                <div>
+                    <button class="btn-text theme-danger" id="periviouse">periviouse</button>
+                    <button class="btn-text theme-primary" id="next2">next</button>
+                </div>
+            </div>
+            <div class="third-section hide">
+                <div>
+                    <h2>voici tout les proprietes de votre produit </h2>
+                </div>
+                <div class="propriets">
+                    <p>le nome de ton produit est : <span class="Name">nothing</span></p>
+                    <p>le price de ton produit est :<span class="priice">nothing</span></p>
+                    <p>le lien de ton produit est :<span class="imaage">nothing</span></p>
+                    <div class="data-discount hide">
+                        <p>le pourcentage de reduction sur ton produit est :<span class="disccount">nothing</span></p>
+                        <p>la date de ton produit est :<span class="Date">nothing</span></p>
+                    </div>
+                    <p>la Température de ton produit est :<span class="Température">nothing</span></p>
+                    <p>l'intensite de ton produit est :<span class="intensite">nothing</span></p>
+                    <p>la Taille de ton produit est :<span class="Small">nothing</span></p>
+                    <p>la Taille de ton produit est :<span class="Large">nothing</span></p>
+                    <p>la Taille de ton produit est : :<span class="Medium">nothing</span></p>
+                    <p>le type de lait peux utiliser dans ton produit :<span class="Vache">nothing</span></p>
+                    <p>le type de lait peux utiliser dans ton produit :<span class="Soja">nothing</span></p>
+                    <p>le type de lait peux utiliser dans ton produit :<span class="Amande">nothing</span></p>
+                    <p>le type de lait peux utiliser dans ton produit :<span class="Avoine">nothing</span></p>
+                    
+                    <p>le type de Suppléments peux etre ajoute a ton produit est :<span class="Vanille">nothing</span></p>
+                    <p>le type de Suppléments peux etre ajoute a ton produit est :<span class="Caramel">nothing</span></p>
+                    <p>le type de Suppléments peux etre ajoute a ton produit est :<span class="Noisette">nothing</span></p>
+                </div>
+                <div>
+                    <button class="btn-text theme-danger" id="periviouse2">periviouse</button>
+                    <button class="btn-text theme-primary" type="submit" id="next3">next</button>
+                </div>
+            </div>
+
+        </form>
+    </section>
+
+</body>
+<script src="Wizard.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-1a/pXj49ZQ1aHEmrJ+gMw1otqoVsYwlEnlD8mIfY2TV03r20Y0CN7uqx1tQogjPL"
+    crossorigin="anonymous"></script>
+
+
+</html>
