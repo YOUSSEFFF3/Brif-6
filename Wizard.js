@@ -93,17 +93,24 @@ periviouse2.addEventListener("click", (e) => {
 })
 const submit = document.querySelector('form')
 submit.addEventListener("submit", (e) => {
+    Swal.fire({
+  position: "top-end",
+  icon: "success",
+  title: "Your work has been saved",
+  showConfirmButton: false,
+  timer: 1500
+});
 })
 // $$$$$$$$$$$$$$$$$$$$$$ les function  $$$$$$$$$$$$$$$$$$$$$$$$$
 
 let x = []
 let y = true
 function validation() {
-    chek(namek, nomRegex, data.Name)
-    chek(price, prixRegex, data.priice)
-    chek(image, urlRegex, data.imaage)
+    chek(namek, nomRegex, "Name")
+    chek(price, prixRegex, "priice")
+    chek(image, urlRegex, "imaage")
     if (reduction.checked) {
-        chek(pourcentage, reductionRegex, data.disccount)
+        chek(pourcentage, reductionRegex,"disccount")
     }
     if (x.some(checkVlidation)) {
         x = []
@@ -132,6 +139,7 @@ reduction.addEventListener('click', (e) => {
     if (reduction.checked) {
 
         document.querySelector(".donne-reduction").classList.remove("hide")
+        document.querySelector(".data-discount").classList.remove("hide")
 
     } else {
         document.querySelector(".donne-reduction").classList.add("hide")
@@ -179,19 +187,19 @@ function validation2() {
     checkedRecoirement(checkBoxesTaille)
     checkedRecoirement(checkBoxesLait)
     checkedRecoirement(checkBoxesSuppléments)
-    checkCheckbox(taille1, data.Small)
-    checkCheckbox(taille2, data.Medium)
-    checkCheckbox(taille3, data.Large)
-    checkCheckbox(lait1, data.Vache)
-    checkCheckbox(lait2, data.Avoine)
-    checkCheckbox(lait3, data.Soja)
-    checkCheckbox(lait4, data.Amande)
-    checkCheckbox(supl1, data.Vanille)
-    checkCheckbox(supl2, data.Caramel)
-    checkCheckbox(supl3, data.Noisette)
-    Température(chaude, data.Température)
-    Température(glace, data.Température)
-    fRange(range,data.intensite)
+    checkCheckbox(taille1, "Small")
+    checkCheckbox(taille2, "Medium")
+    checkCheckbox(taille3, "Large")
+    checkCheckbox(lait1, "Vache")
+    checkCheckbox(lait2, "Avoine")
+    checkCheckbox(lait3, "Soja")
+    checkCheckbox(lait4, "Amande")
+    checkCheckbox(supl1, "Vanille")
+    checkCheckbox(supl2, "Caramel")
+    checkCheckbox(supl3, "Noisette")
+    Température(chaude, "Température")
+    Température(glace, "Température")
+    fRange(range,"intensite")
     if (ararrray.some(checkVlidation)) {
         ararrray=[]
         Swal.fire({
@@ -258,8 +266,8 @@ function checkCheckbox(input, key) {
         data[key] = span.textContent
         console.log(data[key]);
 
-    } else
-        data[key] = null
+    } else  data[key] = null
+       
 
 }
 function condition(checkbox) {
@@ -286,13 +294,11 @@ function Température(input, key) {
 function affichage() {
     console.log(data);
     Object.keys(data).forEach(element => {
-        if (element != null) {
-            let box = document.createElement("span")
+        if (data[element] != null) {
+            let box = document.querySelector(`.${element}`)
+            console.log(box);
             box.textContent = data[element]
-            let place=document.querySelector(".propriets")
-            place.appendChild(box)
             return
-
         }
     });
 }
